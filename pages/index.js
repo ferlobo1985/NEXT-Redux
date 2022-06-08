@@ -2,7 +2,12 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
+import { useSelector } from 'react-redux'
+
 export default function Home() {
+  const movies = useSelector((state)=>state.movies.list);
+  console.log(movies)
+
   return (
     <div className={styles.container}>
       <Head>
